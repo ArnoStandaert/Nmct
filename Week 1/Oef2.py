@@ -1,4 +1,12 @@
-# Ga na hoe je ook een enkel/dubbel aanhalingstekens, tab, return binnen een tekst kan
-#gebruiken. Print volgende tekst af door één lijn code te gebruiken:
+sec = int(input("Geef het aantal seconden in:\n"))
 
-print("Labo basic programming, \n\t Labo week 1 \n\t\t Kennismaking met \"Python\", \n\t\t Werken met variabelen. \n Labo basic programming, \n\t Labo week 2 ")
+dagen = int(sec / 86400)
+sec -= dagen * 86400
+uren = int(sec / 3600)
+sec -= uren * 3600
+minuten = int(sec / 60)
+sec -= minuten * 60
+seconden = int(sec % 60)
+
+
+print("d:h:m:s -> {0}:{1}:{2}:{3}".format(dagen, uren, minuten, seconden))
